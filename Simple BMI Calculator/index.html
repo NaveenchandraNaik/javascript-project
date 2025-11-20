@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="BMI.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple BMI Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bmi-calculator">
+        <img src="BMI.jpeg" alt="bmi_icon" />
+        <h2>Simple BMI Calculator</h2>
+        <label for="weight">Weight (kg):</label>
+        <input
+          type="number"
+          name=""
+          id="weight"
+          placeholder="Enter weight in kg"
+          required
+        />
+        <label for="height">Height (m):</label>
+        <input
+          type="number"
+          name=""
+          id="height"
+          placeholder="Enter height in meter"
+          required
+        />
+        <button type="button" onclick="calculate()">Calculate</button>
+        <p id="bmi" class="bmi"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
