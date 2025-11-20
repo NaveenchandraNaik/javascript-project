@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="celsius-to-fahrenheit.ico"
+      type="image/x-icon"
+    />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="temparature">
+        <img src="celsius-to-fahrenheit.png" alt="temp_icon" />
+        <h2>Temperature Converter</h2>
+        <label for="number">Enter Temperature:</label>
+        <input type="number" id="temp" placeholder="Please enter temparature" />
+        <label for="dropdown">Choose unit:</label>
+        <select id="drp">
+          <option value="celcius">Celcius</option>
+          <option value="faranhit">Faranhit</option>
+        </select>
+        <button type="button" onclick="calculateTemp()">Convert</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
