@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+.app-container {
+  max-width: 1024px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.counter-app {
+  width: 250px;
+  height: 250px;
+  background-color: #deeafe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 130px 30px;
+}
+.counter-app h1,
+.password-app h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.counter {
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+button {
+  width: 6vh;
+  height: 5vh;
+  background-color: #3a78ef;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
