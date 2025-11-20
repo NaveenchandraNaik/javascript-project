@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b88d7;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  margin: 10px;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.cards h1 {
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+.cards button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #1b88d7;
+  color: white;
+  margin: 15px;
+}
+.joke-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.click_img {
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  mix-blend-mode: darken;
+}
+.joke-container .generate-joke {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.joke-container .setup {
+  text-align: center;
+  margin: 25px;
+  font-size: 25px;
+}
+.joke-container .punchline {
+  text-align: center;
+  margin: 25px;
+  font-size: 25px;
+}
+.joke-container .joke_type {
+  color: skyblue;
+}
