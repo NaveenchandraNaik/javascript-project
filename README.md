@@ -18,4 +18,5 @@ A collection of fun, interactive, and user-friendly JavaScript Mini Projects.
 | 03 | **[BMI Calculator](https://ncnaik-bmi-calculator.netlify.app/)** | Calculate BMI |
 | 04 | **[Temperature Converer](https://ncnaik-temperature-converter.netlify.app/)** | Convert temperature to °C and °F |
 | 05 | **[Random Joke Generator](https://ncnaik-random-joke-generator.netlify.app/)** | Fetches joke from public API |
+| 06 | **[Country Finder App](https://ncnaik-country-finder.netlify.app/)** | Fetches Country details using API |
 | …  | **More coming soon!** | |
