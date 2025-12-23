@@ -1,3 +1,6 @@
+// <!---------------For Netlify------------->
+// const apiKey = ' https://www.omdbapi.com/?i=tt3896198&apikey=3e321a69';
+// const apiKey_ID = 'https://www.omdbapi.com/?i';
 const apiKey = ' http://www.omdbapi.com/?i=tt3896198&apikey=3e321a69';
 const apiKey_ID = 'http://www.omdbapi.com/?i';
 const key = 'apikey=3e321a69';
@@ -8,9 +11,14 @@ const movieCardContainer = document.querySelector('.movie_container');
 
 const modal = document.querySelector('.modal');
 const review = document.querySelector('.review');
+const emptyInput = document.createElement('h2');
+
+emptyInput.classList.add('empty_input');
+emptyInput.textContent = 'Please enter a movie or TV show name';
+movieCardContainer.append(emptyInput);
 movieCardContainer.style.display = 'flex';
-movieCardContainer.innerHTML = 'Please enter a movie or TV show name';
-movieCardContainer.classList.add('empty_input');
+
+
 async function search() {
     movieCardContainer.innerHTML = ''
     const movieName = searchTerm.value;
@@ -22,8 +30,6 @@ async function search() {
             movieCardContainer.append(loader);
             setTimeout(() => {
                 loader.classList.remove('loader');
-                const emptyInput = document.createElement('h3');
-                emptyInput.classList.add('empty_input');
                 emptyInput.textContent = 'Please enter a movie or TV show name';
                 movieCardContainer.append(emptyInput);
                 return
@@ -39,6 +45,7 @@ async function search() {
         setTimeout(() => {
             movie.forEach((movie) => {
                 loader.classList.remove('loader');
+                movieCard.style.display = 'flex';
                 let cloneCard = movieCard.cloneNode(true);
                 cloneCard.id = `${movie.imdbID}`
                 cloneCard.querySelector('img').src = `${movie?.Poster}`;
@@ -52,12 +59,13 @@ async function search() {
     } catch (error) {
         console.log('Error fetching data:', error);
         loader.classList.remove('loader');
+        emptyInput.textContent = '';
         const errorMessage = document.createElement('h3');
         errorMessage.classList.add('error_message');
         errorMessage.textContent = 'An error occurred while fetching data. Please try again later.';
         movieCardContainer.append(errorMessage);
     }
- 
+
 }
 
 async function openModal(event) {

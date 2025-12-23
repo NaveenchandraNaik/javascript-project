@@ -58,10 +58,9 @@ nav .search > button {
   text-align: center;
   padding: 10px;
   width: 100%;
-  font-size: 25px
 }
 .movie_card {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 200px;
   border-radius: 5px;
