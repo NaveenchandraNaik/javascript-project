@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.imdb {
+  background-color: black;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: rgb(32 30 30);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+nav .logo {
+  background-color: #f5c518;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-align: center;
+  height: 35px;
+}
+nav .search {
+  display: flex;
+  padding: 0px 10px;
+}
+nav .search > input {
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  height: 35px;
+}
+nav .search > button {
+  background-color: #f5c518;
+  font-weight: bold;
+  padding: 3px;
+  width: 70px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  text-align: center;
+  height: 36px;
+  cursor: pointer;
+}
+.movie_container {
+  background-color: black;
+  height: auto;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.empty_input {
+  color: #f5c518;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  font-size: 25px
+}
+.movie_card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 2px solid #f5c518;
+  margin: 6px;
+  cursor: pointer;
+}
+.movie_card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+.movie_card > img {
+  height: 230px;
+}
+.movie_card > .movie_name {
+  color: white;
+  text-align: center;
+  background-color: rgb(18 18 18);
+  padding: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.85);
+  width: 30rem;
+  max-width: calc(100% - 2rem);
+  height: auto;
+  color: white;
+  border: 3px solid white;
+  border-radius: 25px;
+  overflow-y: auto;
+  position: relative; /* so absolutely positioned children (close btn) are inside this box */
+}
+.modal-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+.modal-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  height: 15rem;
+  width: 15rem;
+  padding: 15px;
+  border-radius: 30px;
+}
+.modal-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f5c518;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.modal-body {
+  background-color: #1a1a1a;
+  padding: 20px;
+  & .card {
+    & .sub-title {
+      font-size: large;
+      margin-bottom: 5px;
+      color: #f5c518;
+    }
+    background-color: #252525;
+    padding: 5px;
+    border-radius: 10px;
+    border-left: 2px solid #f5c518;
+    margin: 10px 0px;
+  }
+}
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.sub-info,
+.genre,
+.ratings {
+  text-align: center;
+  font-size: medium;
+  font-weight: lighter;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+span {
+  color: #ddd;
+}
+h4 {
+  color: #999;
+  padding: 5px;
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  .card {
+    width: 48%;
+  }
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #f5c518;
+  border-bottom: 16px solid #f5c518;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    flex-direction: column;
+    & .search {
+      margin: 5px;
+      input {
+        width: auto;
+      }
+    }
+  }
+  .modal-content {
+    height: 40rem;
+  }
+ .modal-header-container {
+    flex-direction: column;
+  }
+  .card-row {
+    flex-direction: column;
+    & .card {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

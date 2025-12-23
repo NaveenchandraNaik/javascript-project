@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imdb_logo.ico" type="image/x-icon">
+    <title>IMDb Movie Search App</title>
+  </head>
+  <body>
+    <div class="imdb">
+      <nav>
+        <div class="logo">IMDb</div>
+        <div class="search">
+          <input
+            type="search"
+            name="search_key"
+            id="inputKey"
+            placeholder="search for movie, web series...."
+          />
+          <button type="button" onclick="search()">search</button>
+        </div>
+      </nav>
+      <div class="movie_container">
+        <div class="movie_card" onclick="openModal(event)">
+          <img src="" alt="mov" />
+          <div class="movie_name"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button type="button" onclick="closeModal()" class="close_btn">
+          X
+        </button>
+        <div class="modal-header">
+          <div class="modal-header-container">
+            <img src="" alt="" id="modalImg" />
+            <div class="modal-header-content">
+            <h3 class="title"></h3>
+            <p class="sub-info"></p>
+            <p class="genre"></p>
+            <p class="ratings"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+            <div class="sub-title">Storyline:</div>
+            <div class="plot"></div>
+          </div>
+          <div class="card-row">
+            <div class="card">
+              <div class="sub-title">Details:</div>
+              <h4>Director: <span class="director"></span></h4>
+              <h4>Writer: <span class="writer"></span></h4>
+              <h4>Laguage: <span class="language"></span></h4>
+              <h4>Country: <span class="country"></span></h4>
+            </div>
+            <div class="card">
+              <div class="sub-title">Box Office & Awards:</div>
+              <h4>Box Office: <span class="box-office"></span></h4>
+              <h4>Runtime: <span class="runtime"></span></h4>
+              <h4>Rated: <span class="rated"></span></h4>
+              <h4>Released: <span class="released"></span></h4>
+              <h4>Votes: <span class="imdb-votes"></span></h4>
+              <h4>Awards: <span class="award"></span></h4>
+            </div>
+          </div>
+          <div class="card">
+            <div class="sub-title">User Reviews</div>
+            <ul class="review"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
